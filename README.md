@@ -76,7 +76,8 @@ At this point, your GitHub account contains an empty repository, having the name
     > In case you want to use a different name from `my-app` (e.g. `web-ui`), you can accomplish that by replacing all occurrences of `my-app` in this tutorial, with that other name (i.e. `my-app` --> `web-ui`).
   
     ```shell
-    $ npx create-react-app my-app
+    $ npx create-react-app my-app # Deprcated
+    $ npx create-next-app@latest my-app
     ```
 
     > That command will create a React app written in JavaScript. To create one written in [TypeScript](https://create-react-app.dev/docs/adding-typescript/#installation), you can issue this command instead:
@@ -148,7 +149,8 @@ At this point, the React app's `package.json` file includes a property named `ho
     ```diff
     "scripts": {
     +   "predeploy": "npm run build",
-    +   "deploy": "gh-pages -d build",
+    +   "deploy": "gh-pages -d build", # Deprecated
+    +   "deploy": "gh-pages -d dist",
         "start": "react-scripts start",
         "build": "react-scripts build",
     ```
