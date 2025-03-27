@@ -149,8 +149,8 @@ At this point, the React app's `package.json` file includes a property named `ho
     ```diff
     "scripts": {
     +   "predeploy": "npm run build",
-    +   "deploy": "gh-pages -d build", # Deprecated
-    +   "deploy": "gh-pages -d dist",
+    +   "deploy": "gh-pages -d build",  # Deprecated
+    +   "deploy": "gh-pages -d out",    # changed to the output folder
         "start": "react-scripts start",
         "build": "react-scripts build",
     ```
